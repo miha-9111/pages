@@ -3,7 +3,6 @@
     <ul class="pagination">
       <li
         class="page-item"
-        appClass
         [ngClass]="{ disabled: currentPage === 0 }"
       >
         <a class="page-link" (click)="currentPage = currentPage - 1">Prev</a>
@@ -28,6 +27,6 @@
 </div>
 
 <div class="images">
-  <h4>{{ images[currentPage].title }}</h4>
+  <h4 appClass [backgroundColor]="'green'">{{ images[currentPage].title }}</h4>
   <img [src]="images[currentPage].url" alt="">
 </div>
